@@ -118,12 +118,12 @@ private :
 		Mat_<uchar>::iterator greenItend = green.end<uchar>();
 
 		for (; resultIt != resultItend&&redIt != redItend&&greenIt != greenItend; ++resultIt, ++redIt, ++greenIt) {
-			if (((*resultIt)[2] - (*resultIt)[1]) > 0.36 && ((*resultIt)[1] - (*resultIt)[0]) < 0.08 && ((*resultIt)[1] < 0.14)) {
+			if (((*resultIt)[2] - (*resultIt)[1]) > 0.16 && ((*resultIt)[1] - (*resultIt)[0]) < 0.08 && ((*resultIt)[1] < 0.30)) {
 				(*redIt) = 255;
 			} else {
 				(*redIt) = 0;
 			}
-			if (((*resultIt)[2] - (*resultIt)[1]) < /*-0.16*/ -0.16 && ((*resultIt)[1] - (*resultIt)[0]) > /*0.18*/ 0.04 && ((*resultIt)[1] > 0.25)) {
+			if (((*resultIt)[2] - (*resultIt)[1]) < /*-0.16*/ -0.16 && ((*resultIt)[1] - (*resultIt)[0]) > /*0.18*/ 0.004 && ((*resultIt)[1] > 0.10)) {
 				(*greenIt) = 255;
 			} else {
 				(*greenIt) = 0;
